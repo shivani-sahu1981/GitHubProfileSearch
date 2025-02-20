@@ -30,3 +30,15 @@ async function fetchGitHubProfile(username){
         displayError(error.message);
     }
 }
+
+// display profile data
+
+function displayProfile(data){
+    profileContainer.classList.remove("hidden");
+    errorMessage.classList.add("hidden");
+
+    avatar.src = data.avatar_url;
+    name.innerText = data.name || "No name provided";
+    bio.innerText = data.bio || "no bio available";
+    followers.innerText = data.followers;
+}
