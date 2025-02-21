@@ -45,3 +45,9 @@ function displayProfile(data){
     repos.innerText = data.public_repos;
     profileLink.href = data.html_url;
 }
+
+function displayError(message){
+    errorMessage.innerText = message;
+    errorMessage.classList.remove("hidden");
+    profileContainer.classList.add("hidden");
+}
