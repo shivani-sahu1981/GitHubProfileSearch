@@ -41,4 +41,7 @@ function displayProfile(data){
     name.innerText = data.name || "No name provided";
     bio.innerText = data.bio || "no bio available";
     followers.innerText = data.followers;
+    following.innerText = data.following;
+    repos.innerText = data.public_repos;
+    profileLink.href = data.html_url;
 }
