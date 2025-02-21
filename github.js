@@ -1,5 +1,5 @@
-const searchButton = document.getElementById('search-btn');
-const username = document.getElementById('username');
+const searchButton = document.getElementById("search-btn");
+const username = document.getElementById("username");
 const profileContainer = document.getElementById("profile-container");
 const errorMessage = document.getElementById("error-message");
 
@@ -51,3 +51,10 @@ function displayError(message){
     errorMessage.classList.remove("hidden");
     profileContainer.classList.add("hidden");
 }
+
+searchButton.addEventListener("click", () =>{
+    const usernameValue = username.value.trim();
+    if(usernameValue) {
+        fetchGitHubProfile(usernameValue);
+    }
+});
